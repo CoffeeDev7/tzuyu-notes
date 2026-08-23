@@ -1,0 +1,1 @@
+Tauri wrapper will be added after the web prototype is verified. The React app is intentionally kept platform-neutral for the first proof of concept.

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Tzuyu Notes",
+  "version": "0.1.0",
+  "identifier": "com.coffeedev7.tzuyunotes",
+  "build": {
+    "beforeDevCommand": "npm run dev -- --host 127.0.0.1",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Tzuyu Notes",
+        "width": 1100,
+        "height": 700,
+        "minWidth": 600,
+        "minHeight": 500,
+        "resizable": true
+      }
+    ],
+    "security": { "csp": null }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all"
+  }
+}

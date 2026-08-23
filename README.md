@@ -60,11 +60,11 @@ npm run dev
 
 ## Run as a native Fedora app
 
-Tauri requires Rust and the Linux system dependencies described in the official Tauri prerequisites. After cloning and installing dependencies:
+Tauri requires Rust and Linux system dependencies. After cloning and installing dependencies:
 
 ```bash
 npm install
-npm run tauri dev
+npm run tauri -- dev
 ```
 
 A native Tauri window should open. This is the first real cross-platform test.
@@ -72,32 +72,30 @@ A native Tauri window should open. This is the first real cross-platform test.
 For a release build:
 
 ```bash
-npm run tauri build
+npm run tauri -- build
 ```
 
 ## Run as a native Android app
 
-Android development additionally requires Android Studio, the Android SDK/platform tools, Java, and the Android Rust targets. Tauri's current prerequisites are documented here:
-
-https://v2.tauri.app/start/prerequisites/
+Android development additionally requires Android Studio, the Android SDK/platform tools, Java, and the Android Rust targets. See the current Tauri prerequisites: https://v2.tauri.app/start/prerequisites/
 
 Once those are installed, initialize the Android project once:
 
 ```bash
 npm install
-npm run tauri android init
+npm run tauri -- android init
 ```
 
 Then connect the phone with USB debugging enabled (or use an Android emulator) and run:
 
 ```bash
-npm run tauri android dev
+npm run tauri -- android dev
 ```
 
 For an installable APK build:
 
 ```bash
-npm run tauri android build
+npm run tauri -- android build
 ```
 
 Tauri uses the normal Android Studio project underneath, so Android Studio/SDK setup is part of the native build environment.

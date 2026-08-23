@@ -1,0 +1,20 @@
+[package]
+name = "tzuyu_notes"
+version = "0.1.0"
+description = "Tiny local-first notes prototype"
+authors = ["CoffeeDev7"]
+edition = "2021"
+
+[lib]
+name = "tzuyu_notes_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2" }
+
+[dependencies]
+tauri = { version = "2" }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
